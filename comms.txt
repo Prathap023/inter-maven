@@ -1,0 +1,16 @@
+docker build -t inter-maven .
+
+docker run -d --name spring-container -p 8081:8080 inter-maven
+
+docker stop spring-container
+
+
+docker ps              // Running containers
+docker ps -a           // All containers
+docker rm -f spring-container
+docker logs spring-container
+docker images
+
+docker login
+docker tag inter-maven <your-dockerhub-username>/inter-maven:latest
+docker push <your-dockerhub-username>/inter-maven:latest
