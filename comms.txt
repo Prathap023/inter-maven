@@ -14,3 +14,8 @@ docker images
 docker login
 docker tag inter-maven <your-dockerhub-username>/inter-maven:latest
 docker push <your-dockerhub-username>/inter-maven:latest
+
+
+sudo vim /var/lib/jenkins/config.xml
+
+<useSecurity>false</useSecurity>
